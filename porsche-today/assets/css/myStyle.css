@@ -1,0 +1,877 @@
+/* Styling the post categories */
+ul.post-categories {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  max-width: fit-content;
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.post-categories-cont {
+  display: inline-block;
+}
+
+.post-categories li:not(:last-child)::after {
+  content: "\00a0\00a0/\00a0\00a0";
+}
+
+.post-categories a {
+  color: #666;
+}
+
+.post-prev-info {
+  color: #666;
+}
+
+.post-prev-info a {
+  color: #666;
+}
+
+.post-prev-info a:hover {
+  color: #111;
+}
+
+.tags-container {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  align-content: center;
+}
+
+.tags-container a {
+  display: inline-block;
+  margin: 0 2px 5px 0;
+  padding: 3px 10px;
+  border: 1px solid #e9e9e9;
+  font-size: 11px;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 1px;
+}
+
+.tags-container a:hover {
+  background-color: #4b4e53;
+  color: #fff;
+}
+
+/* Styling the calendar widget */
+.wp-calendar-table caption {
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+.wp-calendar-table thead th {
+  text-align: center;
+}
+
+.wp-calendar-table tbody a {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  font-weight: 600;
+}
+
+.wp-calendar-table tbody td:has(a) {
+  transition: all 0.2s;
+}
+
+.wp-calendar-table tbody td:has(a):hover {
+  background-color: #bbb;
+}
+
+.wp-calendar-table tbody td:has(a):hover a {
+  color: #fff;
+}
+
+.wp-calendar-table #today {
+  background-color: #ddd;
+}
+
+/* Aplico estilos a heading que han sido introducidos en forma de widget porque
+   calendar no trae por defecto */
+.widget .wp-block-heading {
+  margin-bottom: 18px;
+  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: 600;
+  color: #4b4e53;
+}
+
+.widget:has(.wp-block-heading) {
+  /* pone que hay error pero el codigo funciona como deberia */
+  margin: 0;
+}
+
+.widget-posts-img {
+  float: none;
+  margin: 0;
+  width: 100px;
+  aspect-ratio: 4/3;
+}
+
+.recent-post-container {
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+.recent-post-container > a {
+  flex: 0 1 30%;
+}
+
+.recent-post-container .widget-posts-descr {
+  flex: 0 1 70%;
+  padding-left: 10px;
+}
+
+@media only screen and (max-width: 47.937em) {
+  .recent-post-container > a {
+    flex: 0 0 100px;
+  }
+}
+
+/* Styling the search result posts */
+
+.search-post-container {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+
+  padding: 0;
+  margin-bottom: 50px;
+  background-color: #f2f2f2;
+}
+
+.search-post-container .post-prev-img {
+  flex: 0 0 150px;
+  margin: 0;
+  width: 100px;
+}
+
+.search-post-container .post-prev-img img {
+  width: 100%;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+}
+
+.search-post-container .post-content {
+  flex: 0 1 75%;
+
+  padding: 20px;
+  color: #fff;
+  width: 75%;
+}
+
+.search-post-container .post-prev-info {
+  margin: 0;
+}
+
+.search-post-title {
+  font-size: 1.6rem !important;
+  line-height: 1.3 !important;
+}
+
+@media only screen and (max-width: 26em) {
+  .search-post-container {
+    display: inline-block;
+  }
+
+  .search-post-container .post-prev-img {
+    width: 100%;
+    padding: 20px 20px 0 20px;
+  }
+
+  .search-post-container .post-content {
+    width: 100%;
+  }
+}
+
+/* Dando estilos a la paginacion */
+
+.blog-pag ul > li {
+  display: inline;
+}
+
+.blog-pag ul .current,
+.blog-pag ul .current:focus,
+.blog-pag ul .current:hover {
+  z-index: 2;
+  color: #fff;
+  cursor: default;
+  background-color: #4b4e53 !important;
+  border-color: #337ab7;
+}
+
+.blog-pag ul .page-numbers:focus,
+.blog-pag ul .page-numbers:hover {
+  background-color: #4b4e53;
+}
+
+.blog-pag ul .page-numbers:focus,
+.blog-pag ul .page-numbers:hover {
+  background-color: #eee;
+}
+
+.blog-pag ul > li > a,
+.blog-pag ul > li > span {
+  color: #7e8082;
+  margin-right: 7px;
+  padding: 8px 14px;
+  border: none;
+  border-radius: 0;
+}
+
+@media screen and (max-width: 767px) {
+  .widget:has(.widget-search-form) {
+    margin-top: 150px;
+    position: relative;
+  }
+
+  .widget:has(.widget-search-form)::before {
+    content: "";
+    position: absolute;
+    top: -75px;
+    left: 0;
+    right: 0;
+    border-top: 1px solid #ccc;
+  }
+}
+
+/* Dando estilos al titulo de seccion del blog */
+.section-title-blog {
+  margin-bottom: 30px;
+}
+
+/* dando estilos al mapa de contacto */
+
+.contact-bg {
+  background-size: cover !important;
+  background-position: center -25rem !important;
+  background-repeat: no-repeat !important;
+  height: 550px !important;
+}
+
+@media only screen and (max-width: 1025px) {
+  .contact-bg {
+    background-position: center center !important;
+    height: 300px !important;
+  }
+}
+
+.map-container {
+  margin: 0;
+  padding: 0;
+}
+
+.map-container iframe {
+  margin-bottom: -7px;
+}
+
+/* dando estilo al hero de los link */
+
+.pb-100 {
+  padding-bottom: 100px;
+}
+
+@media only screen and (max-width: 768px) {
+  .mt-768 {
+    margin-top: 100px !important;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .pb-100 {
+    padding-bottom: 50px;
+  }
+  .pt-100 {
+    padding-top: 50px;
+  }
+}
+
+.pt-300 {
+  padding-top: 300px;
+}
+
+.pt-500 {
+  padding-top: 500px;
+}
+
+.my-50 {
+  margin-bottom: 50px;
+  margin-top: 50px;
+}
+
+.my-page-title {
+  /* font-size: clamp(2rem, 1.4295rem + 2.8088vw, 4.8rem); */
+  font-size: 4.8rem;
+  color: #fff;
+  font-weight: 700;
+}
+
+.my-text-shadow {
+  /* text-shadow: 0px 0px 12px #000; */
+  filter: drop-shadow(5px 5px 5px #000);
+}
+
+@media only screen and (max-width: 1025px) {
+  .my-page-title {
+    text-align: center;
+  }
+}
+
+/* ESTILOS en autor nicename */
+
+.container-autor {
+  padding: 50px 50px 50px 50px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.container-text {
+  padding: 0 50px 50px 50px;
+  max-width: 600px;
+  margin: 0 auto;
+  /* hyphens: auto; */
+  /* font-style: italic; */
+}
+
+.imagen {
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 500px;
+}
+
+.author-flex-container {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.author-flex-col {
+  flex: 0 0 50%;
+}
+
+@media screen and (max-width: 61.937em) {
+  .author-flex-col {
+    flex: 0 0 100%;
+  }
+
+  .order-1 {
+    order: 1;
+  }
+
+  .order-2 {
+    order: 2;
+  }
+}
+
+.my-icon-big {
+  font-size: 32px;
+}
+
+@media screen and (max-width: 25.875em) {
+  .my-icon-big {
+    font-size: 24px;
+  }
+}
+
+.my-social-menu {
+  display: flex;
+  justify-content: space-between;
+  margin: 27px 0 18px 0;
+  list-style: none;
+  max-width: 240px;
+  padding: 0;
+}
+
+@media only screen and (max-width: 767px) {
+  .hero-container .my-social-menu {
+    width: 250px !important;
+  }
+  .hero-container .author-text {
+    font-size: 3rem;
+  }
+}
+
+@media only screen and (max-width: 416px) {
+  .hero-container .my-social-menu {
+    width: 200px !important;
+  }
+}
+
+.my-social-menu a {
+  color: white;
+}
+
+.my-social-menu a:hover {
+  color: #bbbbbb;
+}
+
+.img-circuit {
+  width: 100%;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+
+  position: relative;
+}
+
+.video-container {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.bg-red {
+  width: 100%;
+  height: 500px;
+}
+
+/* Styling posts icons */
+
+.my-post-icons {
+  font-size: 24px;
+}
+
+.author-name {
+  color: #4b4e53;
+}
+
+.my-post-icons-right {
+  font-size: 24px;
+  margin-right: 7px;
+}
+
+.my-post-icons-text {
+  font-size: 16px;
+  margin-left: 7px;
+}
+
+/* MASONRY STYLE */
+
+.sizer {
+  width: 32%;
+}
+@media screen and (max-width: 980px) {
+  .sizer {
+    width: 48%;
+  }
+}
+
+@media screen and (max-width: 520px) {
+  .sizer {
+    width: 100%;
+  }
+}
+
+/* Hero text */
+.hero-text {
+  line-height: 1.3;
+  max-width: 50%;
+  font-size: clamp(1.6rem, 1.5185rem + 0.4013vw, 2rem);
+}
+
+.nav-logo {
+  height: 42px;
+}
+
+@media only screen and (max-width: 47.93em) {
+  .hero-container {
+    margin-left: 20px !important;
+    margin-right: 0 !important;
+  }
+}
+
+.ferry-image {
+  background-position: left center !important;
+}
+
+@media only screen and (max-width: 62em) {
+  .ferry-image {
+    height: 500px;
+  }
+}
+
+@media only screen and (max-width: 44em) {
+  .ferry-image {
+    height: 390px;
+  }
+}
+
+@media only screen and (max-width: 34.68em) {
+  .ferry-image {
+    height: 310px;
+  }
+}
+
+@media only screen and (max-width: 27.56em) {
+  .ferry-image {
+    height: 215px;
+  }
+}
+
+/* .container {
+  border: 1px solid red;
+}
+
+.col-md-6 {
+  border: 1px solid blue;
+} */
+
+.about-text-box {
+  padding: 4rem 1rem !important;
+  align-self: center;
+}
+
+.img-width {
+  margin: 0 auto;
+  display: block;
+}
+
+.normal-text {
+  font-size: clamp(1.6rem, 1.5592rem + 0.2006vw, 1.8rem) !important;
+}
+
+@media only screen and (max-width: 47em) {
+  .padding-reset {
+    padding: 0 !important;
+  }
+
+  .padding-x-reset {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  .image-padding {
+    padding: 4rem 1rem !important;
+  }
+}
+
+.section-padding {
+  padding: 5rem 0;
+  color: #80868f;
+}
+
+.about-img-1 {
+  background: url("../images/911-1.jpeg") !important;
+  background-size: cover !important;
+  background-position: 50% 70% !important;
+}
+
+.about-img-2 {
+  background: url("../images/911-2.jpeg") !important;
+  background-size: cover !important;
+  background-position: 50% 50% !important;
+}
+
+.dealer-img {
+  background: url("../images/dealership-buy.jpg") !important;
+  background-size: cover !important;
+  background-position: 50% 50% !important;
+}
+
+@media only screen and (max-width: 25em) {
+  .about-img {
+    height: 250px;
+  }
+}
+
+.work-bg {
+  background: url(../images/car-bg.jpg) fixed !important;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+  background-position: center start !important;
+}
+
+.mb-150 {
+  margin-bottom: 100px;
+}
+.mt-150 {
+  margin-bottom: 100px;
+}
+
+.video-bg {
+  background: #2c2c2c url(../images/video-bg-1.jpg) fixed !important;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+  background-position: center center !important;
+}
+
+/* I want a margin top until 990 px */
+.margin-now {
+  margin-top: 100px;
+}
+
+@media only screen and (max-width: 61.85em) {
+  .margin-now {
+    margin: 0;
+  }
+}
+
+.our-blog {
+  border: 1px solid grey;
+  color: #333;
+  max-width: 50%;
+  text-align: center;
+}
+
+.our-blog:hover {
+  background-color: grey;
+  color: #fff;
+}
+
+@media only screen and (max-width: 560px) {
+  .our-blog {
+    margin-top: 20px !important;
+    display: block !important;
+    float: none !important;
+    padding: 10px 5px !important;
+  }
+}
+
+.remove-pt {
+  padding-top: 0;
+}
+
+.align-bottom {
+  align-self: bottom !important;
+}
+
+.btn-back-top {
+  background-color: #555 !important;
+  color: #eee !important;
+}
+
+.blog-bg {
+  background-position: left -200px !important;
+  height: 600px !important;
+}
+
+.reviews-bg {
+  background-position: left -400px !important;
+  height: 600px !important;
+}
+
+@media only screen and (max-width: 1669px) {
+  .reviews-bg {
+    background-position: center -300px !important;
+  }
+}
+
+@media only screen and (max-width: 1407px) {
+  .blog-bg {
+    background-position: left -170px !important;
+  }
+
+  .reviews-bg {
+    background-position: center -200px !important;
+  }
+}
+
+@media (max-width: 1024px) {
+  .blog-bg {
+    height: 300px !important;
+    background-position: center center !important;
+  }
+
+  .reviews-bg {
+    background-position: center center !important;
+  }
+}
+
+@media (max-width: 600px) {
+  .blog-bg {
+    height: 300px !important;
+    background-position: center center !important;
+  }
+
+  .reviews-bg {
+    height: 300px !important;
+    background-position: center center !important;
+  }
+}
+
+.news-flex-box {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  align-content: center;
+}
+
+.heading-secondary {
+  font-size: 2.8rem !important;
+  color: #666;
+  margin-bottom: 20px;
+  line-height: 1.2;
+  font-weight: 400;
+}
+
+.news-text {
+  font-size: 1.8rem !important;
+  line-height: 1.2;
+  font-weight: 300;
+  padding-right: 2rem;
+  color: #666;
+}
+
+@media only screen and (max-width: 995px) {
+  .form-column {
+    margin-top: 30px;
+  }
+
+  .news-text {
+    padding-right: 0;
+  }
+}
+
+.post-item {
+  display: flex;
+  flex-flow: column nowrap;
+  min-height: 550px !important;
+}
+
+.related-item {
+  display: flex;
+  flex-flow: column nowrap;
+  min-height: 350px !important;
+}
+
+.post-title {
+  min-height: 6rem;
+}
+
+.text-white {
+  color: #ffffff !important;
+}
+
+.text-black {
+  color: #000 !important;
+}
+
+.page-title-col {
+  background-color: rgba(126, 128, 130, 0.4);
+  padding: 2rem;
+  max-width: fit-content;
+}
+
+.search-bg {
+  background-position: right bottom !important;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+  height: 600px !important;
+}
+
+@media (max-width: 1024px) {
+  .search-bg {
+    background-position: right top !important;
+    height: 500px !important;
+  }
+}
+
+@media (max-width: 644px) {
+  .search-bg {
+    background-position: right bottom !important;
+    height: 250px !important;
+  }
+}
+
+.post-heading-1 {
+  margin: 20px 0 !important;
+}
+
+.mr-10 {
+  margin-right: 10px !important;
+}
+
+.mb-10 {
+  margin-bottom: 10px !important;
+}
+
+.post-prev-text li {
+  list-style: square;
+}
+
+/* LOGIN */
+
+.tab-tab {
+  border: none;
+  margin: 0 auto;
+}
+
+.tab-tab .nav-tabs {
+  border: none;
+}
+
+.tab-tab .nav-tabs > li.active > a,
+.nav-tabs > li.active > a:focus,
+.nav-tabs > li.active > a:hover {
+  background: rgba(255, 255, 255, 1) !important;
+  border: none;
+  color: #4b4e53;
+}
+
+.tab6-cont {
+  background: rgba(255, 255, 255, 1) !important;
+  max-width: fit-content;
+  margin: 0 auto;
+  color: #4b4e53;
+}
+
+.tab6-cont .tab-pane {
+  background: none;
+}
+
+.login-container {
+  max-width: fit-content;
+  margin: 0 auto;
+}
+
+.login-password,
+.login-username {
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.login-password label,
+.login-password input,
+.login-username label,
+.login-username input {
+  flex: 1;
+  margin-bottom: 10px;
+}
+
+.login-submit input {
+  background-color: #2c2c2c;
+  color: white;
+  text-align: center;
+  padding: 0.5rem 1rem;
+  margin-top: 10px;
+}
+
+.login-submit input:hover {
+  background-color: white;
+  color: #2c2c2c;
+}
+
+.tab6-cont h6 a {
+  font-size: 1.6rem !important;
+}
+
+.tab-pane h6:nth-child(even) {
+  font-size: 2.4rem !important;
+  text-transform: capitalize;
+}
+
+.archives-normal {
+  min-height: 200px;
+}
+
+.archives-big {
+  min-height: 350px;
+}
